@@ -1,5 +1,14 @@
-const fn = () => {
-    console.log("We are up");
-};
+const express = require("express");
 
-fn();
+const app = express();
+
+app.use(express.static('tmp'))
+
+app.get("/", (req, res) => {
+    res.send("Vay");
+});
+
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Sunucu ${port} uzerinden baslatildi.`);
+});
