@@ -1,0 +1,20 @@
+{
+  "name": "pcat-proje",
+  "version": "1.0.0",
+  "description": "Photo Album Project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doyransafa/PCAT-project.git"
+  },
+  "keywords": [],
+  "author": "Safa Doyran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/doyransafa/PCAT-project/issues"
+  },
+  "homepage": "https://github.com/doyransafa/PCAT-project#readme"
+}
