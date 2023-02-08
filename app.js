@@ -6,8 +6,13 @@ const app = express();
 
 app.set('view engine', 'ejs')
 
+// kullanilan middlewareler
 app.use(express.static('public'))
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 
+
+// Routelar
 app.get("/index", (req, res) => {
     res.render("index");
 });
@@ -26,6 +31,12 @@ app.get("/add", (req, res) => {
 app.get("/photo", (req, res) => {
     res.render("photo");
 });
+
+app.post("/add_photo", (req, res) => {
+    console.log(req.body)
+    res.redirect("index")
+});
+
 
 const port = 3000;
 app.listen(port, () => {
