@@ -11,7 +11,7 @@ const app = express();
 // connect DB
 mongoose.set('strictQuery', false);
 mongoose
-    .connect("mongodb://127.0.0.1:27017/pcat-test-db")
+    .connect("mongodb+srv://doyransafa:546800asd@cluster0.siwzqiv.mongodb.net/pcat-db?retryWrites=true&w=majority")
     .then(() => console.log("Connected to Photo database!"));
 
 app.set('view engine', 'ejs')
