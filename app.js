@@ -6,7 +6,6 @@ const fileUpload = require('express-fileupload');
 const photoController = require('./controllers/photoController')
 const pageController = require('./controllers/pageController')
 
-
 const app = express();
 
 // connect DB
@@ -29,10 +28,8 @@ app.use(methodOverride('_method', {methods: ['POST', 'GET']}));
 app.get("/", photoController.getAllPhotos);
 app.get("/photo/:id", photoController.getPhotoById);
 app.post("/add_photo", photoController.addPhoto)
-
 app.put('/photo/:id', photoController.updatePhoto)
 app.delete('/photo/:id', photoController.deletePhoto)
-
 
 app.get("/about", pageController.getAboutPage);
 app.get("/add", pageController.getAddPage);
