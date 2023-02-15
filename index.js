@@ -41,7 +41,7 @@ app.get("/photo", (req, res) => {
 
 
 
-const port = 3000;
-app.listen(port, () => {
-    console.log(`Sunucu ${port} uzerinden baslatildi.`);
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log(`Sunucu ${PORT} uzerinden baslatildi.`);
 });
